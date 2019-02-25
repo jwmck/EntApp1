@@ -20,7 +20,7 @@ namespace Week2WS.Pages
         [BindProperty]
         public string operation { get; set; }
 
-        public void OnPost()
+        public void OnPost()  //initial attempt did not work as I tried to create radio buttons using a foreach loop to iterate through an array of operators
         {
             switch (operation)
             {
