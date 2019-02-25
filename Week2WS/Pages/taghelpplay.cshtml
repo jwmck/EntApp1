@@ -1,0 +1,88 @@
+﻿@page
+@model Week2WS.Pages.taghelpplayModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "WS2";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title> taghelpplay </title>
+</head>
+
+<body>
+
+    <label asp-for=Number1>Enter your first number</label>
+    <input asp-for=Number1 />
+
+    <label asp-for=Number2>Enter your second number</label>
+    <input asp-for=Number2 />
+
+    <label asp-for=Double>Enter your first Double</label>
+    <input asp-for=Double />
+
+    <label asp-for=Double2>Enter your second Double</label>
+    <input asp-for=Double2 />
+
+    <label asp-for=Decimal>Enter your first Decimal</label>
+    <input asp-for=Decimal />
+
+    <label asp-for=Decimal2>Enter your second Decimal</label>
+    <input asp-for=Decimal2 />
+
+    <label asp-for=Float>Enter your first Float</label>
+    <input asp-for=Float />
+
+    <label asp-for=Float2>Enter your second Float</label>
+    <input asp-for=Float2 />
+
+    <label asp-for=String>Enter a string</label>
+    <input asp-for=String />
+
+    <label asp-for=DateTime>Enter a DateTime</label>
+    <input asp-for=DateTime />
+
+    <label asp-for=DateTime2>Enter a DateTime</label>
+    <input asp-for=DateTime2 />
+
+    <label asp-for=isContactAllowed>Enter a Bool</label>
+    <input asp-for=isContactAllowed />
+
+    <form method="post">
+
+        <fieldset>
+            <legend>Choose your favourite season</legend>
+            <label for="Winter"> Winter
+                <input value="Winter" id="Winter" type="radio" asp-for=Season>
+            </label>
+
+            <label for="Autumn"> Autumn
+                <input value="Autumn" id="Autumn" type="radio" asp-for=Season>
+            </label>
+
+            <label for="Spring"> Spring
+                <input value="Spring" id="Spring" type="radio" asp-for=Season>
+            </label>
+
+            <label for="Summer"> Summer
+                <input value="Summer" id="Summer" type="radio" asp-for=Season>
+            </label>
+
+            @*<input type="radio" name="operation" value="plus" id="plus" /><label for="plus">Plus</label>
+            <input type="radio" name="operation" value="minus" id="minus" /><label for="minus">Minus</label>
+            <input type="radio" name="operation" value="multiply" id="multiply" /><label for="multiply">Multiply</label>
+            <input type="radio" name="operation" value="divide" id="divide" /><label for="divide">Divide</label>*@
+        </fieldset>
+
+        <button type="submit"> Press Me to submit radio buttons</button>
+    </form>
+
+    <h2>@Model.Message</h2>
+
+
+</body>
+
+</html>
+
